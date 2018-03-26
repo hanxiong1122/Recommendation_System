@@ -1,0 +1,16 @@
+\textnormal{
+\subsection{Details on edge weight formula in each layers}
+\begin{itemize} 
+\item{First layer edge weight}
+\\$node_edge = RStar$
+\\Recall the first layer of our graph is business units that have been reviewed by the input user. The weights on the first layer edges (edges points to first layer) are simply the review of a store by the input user, Users can give review of number from 0 to 5, indicating how much they like the store.
+%The SQL tables that represent the ER project model, along with at least 3-5 rows of concrete data per table.
+\item{Second layer edge weight}
+\\$node_edge = RStar+ RAve()$
+\\Recall the second layer of our graph are users who have reviewed a store in the first layer. The weights on the second layer edges are reviews of users in the second layer, adjusted by the average review score for all ratings the particular user previously gave. For example, an edge from layer 1 to 2 indicates how much the store in layer 1 is liked by a user given the user's average review.
+%The normalization steps for each table, along with explanations/justifications of each normalization step.
+\item{Third layer edge weight}
+\\$node_edge = RStar+ RAve()+ Aux(cate,attr)$
+\\Recall the elements in the third layer are stores that users in layer two have reviewed. Each of the element in layer three will potentially be in the recommendation list. Here we weigh the third layer edges by adjusted reviews, same as second layer edges, and a auxiliary function which looks into category and attribute of business stores, and further detects similarities between users. For each of the stores in layer 3, we extract it's business category, denoted by A for convenience. Then we calculate the probability that category A appears in layer 1.  Note that the probability represents level of demand in this category by the input user. Suppose the user has a very high demand in category A, we assign this category a higher weight. And on the other hand, if the need is 0, we conclude that the input user does not need recommendation on this kind of service, and we assign a tiny weight to stores in this category, so that it is unlikely to appear in the recommendation list. Attribute factor works in similar way as category.
+\end{itemize}
+}

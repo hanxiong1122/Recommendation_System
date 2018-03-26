@@ -1,0 +1,77 @@
+%\textnormal{
+%%%%%%
+%} 
+
+\begin{itemize} 
+
+
+\item{
+	The general system description: We develop a graph-based recommendation system combining both collaborative filtering and item-based method. The aim of the recommendation system is to provide users a most accurate recommendation list according to user habits. This system could be used in various business and commercial websites, e.g., Amazon, Yelp, IMDb and TripAdvisor, which includes almost all the daily area. Advantages and disadvantages of the algorithm for implementation will be shown. We utilize a free datasets including both user and business information from Yelp Dataset Challenge: https://www.yelp.com/dataset challenge.
+
+} 
+
+
+\item{	
+	
+The three types of users: 
+people who seeks for recommendations in traveling, restaurant/food or hotel accommodation.
+	
+} 
+
+
+\item{	
+
+The user's interaction modes: the system uses a graphic user interface (GUI) as interaction mode with the user, where the user can input his/her information/preferences possibly through graph-based, discrete-feature terms or even simple personal identity. The system will output a set of nodes (i.e. suggested cities, restaurants or hotels, etc.) as graph or text format. 
+	
+}
+
+\item{The real world scenarios: }
+	\begin{itemize} 
+	\item{Scenario 1 description: }
+	A user of our recommendation system is concerned what to eat for dinner. He/She wants to pick some new restaurant that satisfies his/her taste best while maintaining a low spending according to the budget restraint. Our system will detect users that share similar tastes based on location, food style, and rating on restaurant that similar user has previously been to, and then recommend several restaurants to our user that he/she would potentially like to try, which also takes budget into consideration.
+	\item{System Data Input for Scenario1: } 
+	Spending, preferred cooking style, location, minimum overall rating
+	\item{Input Data Types for Scenario1: }
+	Nodes on the graph represent users. Edges indicate what restaurant those users have been to.  Weights of edges represent an overall measurement of how well a user likes a restaurant based on the input variables. 
+	\item{System Data Output for Scenario1: }
+	Restaurant recommended by our system.
+	\item{Output Data Types for Scenario1: }
+	Nodes which represent restaurant.  
+	\item {Scenario 2 description: }
+	A user of our system is in town on a business trip,and he only has limited time for lunch, and he wants to explore the best restaurant within a certain distance so that he can finish his lunch in time. And he does not care spending. Our system will finds out possible restaurants nearby, and recommend a list that most fit the users taste by searching restaurant raters with similar taste to our user.
+	\item{System Data Input for Scenario2: } 
+	Preferred cooking style, location, maximum distance, minimum overall rating.
+	\item{Input Data Types for Scenario2: }
+	Nodes on the graph represent different users. Edges indicate what restaurant those users have been to.  Weights of edges represent an overall measurement of how well a user likes a restaurant based on the input variables. 
+	\item{System Data Output for Scenario2: }
+	Restaurants recommendation by our system.
+	\item{Output Data Types for Scenario2: }
+	A list of nodes which represent restaurant.  
+	\end{itemize}
+
+\item{Project Time line.}
+	\begin{itemize}
+	\item{Stage 1: Oct. 14 to Oct. 25, 2016 } 
+	 We will be working on the requirement gathering stage, which includes topic and data selection, model selection, input and output set up, as well as labor division.
+	 \item{Stage 2: Oct. 26 to Nov. 10, 2016 }
+	 Will be working on the deign of algorithm stage. Transformation on the project requirement into a system flow diagram will be done. We will carry out high level pseudo code of the overall system operation, and give a statement on run time and space complexity. 	
+	 \item{Stage 3: Nov.11 to Nov.24, 2016}
+	 Will be working on the implementation stage. Programming language and environment will be settled down. Code, demo and sampling of  finding will be done by Nov.25
+	 \item{Stage 4: Nov.25 to Dec.9, 2016}
+	 Will be working on the implementation of user interface. Our system will output proper recommendation based on the input.
+	 \item{Final stage: Dec.9-Dec.16, 2016}
+	 Final report composition and presentation materials will be done by the due date.
+	\end{itemize}
+	
+%\item{Division of Labor.}
+%	 \begin{itemize}
+	% \item{Dong Shi}
+	 %Report generation, design of the graph-drawing based algorithm
+	 %\item{Yingjiao Liang}
+	 %Report generation, design of the graph-drawing based algorithm
+	 %\item{Hanxiong Wang}
+	 %Report generation, design of graph-drawing based algorithm, UI design, working code
+	 %\end{itemize}
+ 
+
+\end{itemize}
